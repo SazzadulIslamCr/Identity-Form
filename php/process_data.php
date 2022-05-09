@@ -14,7 +14,7 @@
             'password' => $_POST['data']["password"]
         );
 
-        print_r($data);
+        //print_r($data);
 
         if ($connect->connect_error){
             die('Connection Failed : '.$connect->connect_error);
@@ -26,7 +26,6 @@
             ");
             $query->bind_param("sssss",$data['name'],$data['email'],$data['phone'],$data['username'],$data['password']);
             $query->execute();
-            echo '<div class="alert alert-success" role="alert">Registration successful</div>';
         }
     }
 ?>
